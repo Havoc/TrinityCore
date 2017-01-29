@@ -37,6 +37,12 @@ target_link_libraries(connection_patcher
     common
 )
 
+set_target_properties(connection_patcher
+    PROPERTIES
+      FOLDER
+        "tools"
+)
+
 if (UNIX)
   install(TARGETS connection_patcher DESTINATION bin)
 elseif (WIN32)
